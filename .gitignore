@@ -1,0 +1,7 @@
+mongoconnection.txt
+.env
+/node_modules
+/public
+/dev-data
+.eslintrc.json
+.prettierrc
