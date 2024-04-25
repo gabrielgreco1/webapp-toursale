@@ -30,8 +30,5 @@ app.all('*', (req, res, next) => {
   next(new AppError(`Cant find ${req.originalUrl} on this server`, 404))
 })
 
-// Error handling middleware
-app.use()
-
 // 4) START SERVER
 module.exports = app;
