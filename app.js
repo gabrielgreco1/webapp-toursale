@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 
 const AppError = require('./utils/appError')
+const globalErrorHandler = require('./controllers/errorController')
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
 
@@ -29,6 +30,8 @@ app.all('*', (req, res, next) => {
   // if we pass any parameters to a next(), express will know there is a error
   next(new AppError(`Cant find ${req.originalUrl} on this server`, 404))
 })
+
+app.use(globalErrorHandler)
 
 // 4) START SERVER
 module.exports = app;
