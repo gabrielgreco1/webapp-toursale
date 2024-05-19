@@ -1,6 +1,7 @@
+// eslint-disable-next-line no-unused-expressions, arrow-body-style
 module.exports = fn => {
-    return (req, res, next) => {
-      fn(req, res, next).catch(next);
-    };
+  // eslint-disable-next-line no-unused-expressions
+   return (req, res, next) => {
+    fn(req, res, next).catch(next);
   };
-  
+};
